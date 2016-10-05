@@ -1,7 +1,7 @@
 """
 stringjumble.py
 Author: Andy
-Credit: <sources>
+Credit: https://www.tutorialspoint.com/python/string_split.htm
 
 Assignment:
 
@@ -25,8 +25,23 @@ ydnah dnif yam uoy taht skcirt ro seuqinhcet wef a era erehT
 handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
-from ggame import App, RectangleAsset, ImageAsset, SoundAsset
-from ggame import LineStyle, Color, Sprite, Sound
-
-myapp = App()
-myapp.run()
+strin = input("Please enter a string of text (the bigger the better): ")
+print ("You entered \"" + strin + "\". Now jumble it:")
+strinlen=len(strin)
+strinlist=list(strin)
+backwards=""
+strinlen = strinlen-1
+while strinlen > -1:
+    k = strinlist[strinlen]
+    backwards = backwards + str(k)
+    strinlen = strinlen-1
+print(backwards)
+strlist=str.split(strin)
+lenstrinlist = len(strlist)
+lenstrinlist+=-1
+backwardswords=""
+while lenstrinlist > -1:
+    k = strlist[lenstrinlist]
+    backwardswords = backwardswords + str(k) + " "
+    lenstrinlist = lenstrinlist-1
+print(backwardswords)
