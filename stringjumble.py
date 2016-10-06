@@ -29,6 +29,8 @@ strin = input("Please enter a string of text (the bigger the better): ")
 print ("You entered \"" + strin + "\". Now jumble it:")
 strinlen=len(strin)
 strinlist=list(strin)
+
+
 backwards=""
 strinlen = strinlen-1
 while strinlen > -1:
@@ -36,6 +38,8 @@ while strinlen > -1:
     backwards = backwards + str(k)
     strinlen = strinlen-1
 print(backwards)
+
+
 strlist=str.split(strin)
 lenstrinlist = len(strlist)
 lenstrinlist+=-1
@@ -45,12 +49,29 @@ while lenstrinlist > -1:
     backwardswords = backwardswords + str(k) + " "
     lenstrinlist = lenstrinlist-1
 print(backwardswords)
-backwordswordeach=""
+lineoftext = ""
+for i in strlist:
+    wordlen = len(i)
+    wordletlist = list(i)
+    backwardsword=""
+    wordlen = wordlen-1
+    while wordlen > -1:
+        j = wordletlist[wordlen]
+        backwardsword = backwardsword + str(j)
+        wordlen = wordlen-1
+    lineoftext = lineoftext + backwardsword + " "
+print (lineoftext)
+"""
+backwardswordeach=""
 for x in strlist:
-    strinleneach = len(x)
     strinlisteach = list(x)
-    while strinlen > -1:
+    strinleneach = len(strinlisteach)
+    strinleneach += -1
+    lineoftext = ""
+    while strinleneach > -1:
         k = strinlisteach[strinleneach]
         backwardswordeach = backwardswordeach + str(k)
         strinleneach = strinleneach-1
-    print(backwardswordeach)
+        lineoftext= lineoftext + backwardswordeach + " "
+    print(lineoftext)
+    """
