@@ -45,3 +45,12 @@ while lenstrinlist > -1:
     backwardswords = backwardswords + str(k) + " "
     lenstrinlist = lenstrinlist-1
 print(backwardswords)
+backwordswordeach=""
+for x in strlist:
+    strinleneach = len(x)
+    strinlisteach = list(x)
+    while strinlen > -1:
+        k = strinlisteach[strinleneach]
+        backwardswordeach = backwardswordeach + str(k)
+        strinleneach = strinleneach-1
+    print(backwardswordeach)
